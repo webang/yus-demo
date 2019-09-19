@@ -1,25 +1,27 @@
 <template>
-  <Swipe 
-  class="swipe"
-  direction="horizontal"
-  :activeIndex="activeIndex"
-  :loop="loop"
-  :speed="speed"
-  :autoplay="autoplay"
-  @index-changed="handleIndexChanged"
->
-  <SwipeItem class="slide bg1">0</SwipeItem>
-  <SwipeItem class="slide bg2">1</SwipeItem>
-  <SwipeItem class="slide bg3">2</SwipeItem>
-</Swipe>
+  <div>
+    <Swipe
+      class="swipe"
+      direction="horizontal"
+      :activeIndex="activeIndex"
+      :loop="loop"
+      :speed="speed"
+      :autoplay="autoplay"
+      @index-changed="handleIndexChanged"
+    >
+      <SwipeItem class="slide bg1">0</SwipeItem>
+      <SwipeItem class="slide bg2">1</SwipeItem>
+      <SwipeItem class="slide bg3">2</SwipeItem>
+    </Swipe>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import { Swipe, SwipeItem } from 'yus-swipe'
+import Vue from "vue";
+import { Swipe, SwipeItem } from "yus-swipe";
 
 export default {
-    components: {
+  components: {
     Swipe,
     SwipeItem
   },
@@ -28,16 +30,16 @@ export default {
       loop: false,
       autoplay: false,
       speed: 300,
-      direction: 'horizontal',
+      direction: "horizontal",
       activeIndex: 0
-    }
+    };
   },
   methods: {
     handleIndexChanged(index) {
       this.activeIndex = index;
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -50,7 +52,7 @@ export default {
 }
 
 .bg1 {
-  background: #2196F3;
+  background: #2196f3;
 }
 
 .bg2 {
